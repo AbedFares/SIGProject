@@ -1,0 +1,15 @@
+.card-img{
+    width: 100%;
+    height: 595px;
+  }
+.row{
+    margin-top: 450px;
+    text-align: center;  
+}
+.title{
+  color: blue;
+  font-size: 50px;
+}
+.sousTitle{
+  font-size: 18px;
+}

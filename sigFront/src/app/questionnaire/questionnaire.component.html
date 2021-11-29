@@ -1,0 +1,131 @@
+<div class="card bg-dark text-white">
+  <div class="card-img-overlay">
+    <div style="background-image: url('https://thumbs.dreamstime.com/b/abstract-white-grey-technology-hi-tech-futuristic-digital-high-speed-movement-perspective-squares-texture-vector-illustration-201230541.jpg');">
+      <form class="row g-3 needs-validation" #f="ngForm" method="post"  id="form" (ngSubmit)="enregistrer(f)">
+        <div class="titre">Questionnaire</div>
+        <div></div>
+        <div class="col-md-7">
+          <div class="option2">Quel est votre débit Internet ?
+            <span class="text-danger">*</span>
+          <div class="option">
+            <input required ngModel type="radio" id="Bas" name="debit" value="Bas" [(ngModel)]="i.debit">
+               <label for="Bas" class="text-dark">Bas débit : inférieur à 512 kbit/s</label>
+            <br>
+            <input required ngModel type="radio" id="Haut" name="debit" value="Haut" [(ngModel)]="i.debit">
+              <label for="Haut" class="text-dark">Haut débit : entre 512 kbit/s et 30 Mbit/s</label>
+            <br>
+                <input required ngModel type="radio" id="Très haut" name="debit" value="Tres haut" [(ngModel)]="i.debit">
+                <label for="Très haut" class="text-dark">Très haut débit : supérieur à 30 Mbit/s</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="option2">le fournisseur d’accès Internet:
+            <span class="text-danger">*</span>
+            <div class="option">
+            <input required ngModel type="radio" id="Topnet" name="fournisseur" value="Topnet" [(ngModel)]="i.fournisseur">
+               <label for="Topnet" class="text-dark">Topnet</label>
+            <br>
+            <input required ngModel type="radio" id="Globalnet" name="fournisseur" value="Globalnet" [(ngModel)]="i.fournisseur">
+              <label for="globalnet" class="text-dark">Globalnet</label>
+            <br>
+            <input required ngModel type="radio" id="Ooredoo" name="fournisseur" value="Ooredoo" [(ngModel)]="i.fournisseur">
+                <label for="Ooredoo" class="text-dark">Ooredoo</label>
+            <br>
+                <input required ngModel type="radio" id="Orange" name="fournisseur" value="Orange" [(ngModel)]="i.fournisseur">
+                <label for="Orange" class="text-dark">Orange</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="option2">Quel est le type de votre connexion?
+            <span class="text-danger">*</span>
+            <div class="option">
+            <input required ngModel type="radio" id="ADSL" name="type" value="ADSL" [(ngModel)]="i.types">
+               <label for="ADSL" class="text-dark">ADSL</label>
+               <br>
+               <input required ngModel type="radio" id="Données mobiles" name="type" value="Donnees mobiles" [(ngModel)]="i.types">
+              <label for="Données mobiles" class="text-dark">Données mobiles</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="option2">Quel est l'état de votre connexion
+            <span class="text-danger">*</span>
+            <div class="option">
+            <input required ngModel type="radio" id="Rupture" name="etat" value="Rupture" [(ngModel)]="i.etat">
+               <label for="Rupture" class="text-dark">Rupture totale</label>
+            <br>
+            <input required ngModel type="radio" id="Faible" name="etat" value="Faible" [(ngModel)]="i.etat">
+              <label for="Faible" class="text-dark">Faible</label>
+            <br>
+            <input required ngModel type="radio" id="Bonne" name="etat" value="Bonne" [(ngModel)]="i.etat">
+              <label for="Rupture" class="text-dark">Bonne</label>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="option2">Est ce que vous êtes satisfait de votre connexion?
+            <span class="text-danger">*</span>
+            <div class="option">
+            <input required ngModel type="radio" id="Oui" name="satisfait" value="Oui" [(ngModel)]="i.satisfait">
+               <label for="Oui" class="text-dark">Oui</label>
+            <br>
+            <input required ngModel type="radio" id="Non" name="satisfait" value="Non" [(ngModel)]="i.satisfait">
+              <label for="Non" class="text-dark">Non</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="option2">Gouvernorat
+            <span class="text-danger">*</span>
+            <div class="option" >
+              <select class="form-select" required="" aria-label="Default select example" id="pos" name="pos" ngModel  [(ngModel)]="i.pos"  >
+                <option selected value="Ariana"  >Ariana</option>
+                <option value="Béja">Béja</option>
+                <option value="Ben Arous">Ben Arous</option>
+                <option value="Bizerte">Bizerte</option>
+                <option value="Gabes">Gebes</option>
+                <option value="Gafsa">Gafsa</option>
+                <option value="Jendouba">Jandouba</option>
+                <option value="Kairouan">Kairouan</option>
+                <option value="Kasserine">Kasserine</option>
+                <option value="kebili">kebili</option>
+                <option value="Al-Kaf">Le Kef</option>
+                <option value="Mahdia">Mahdia</option>
+                <option value="Manouba">La Mannouba</option>
+                <option value="Medenine">Médenine</option>
+                <option value="Al Munastir">Monastir</option>
+                <option value="Nabeul">Nabeul</option>
+                <option value="Sfax">Sfax</option>
+                <option value="Sidi Bouzid">Sidi Bouzid</option>
+                <option value="Siliana">Siliana</option>
+                <option value="Sousse">Sousse</option>
+                <option value="Tataouine">Tataouine</option>
+                <option value="Tozeur">Tozeur</option>
+                <option value="Tunis">Tunis</option>
+                <option value="Zaghouan">Zaghouan</option>
+
+
+              </select>
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+
+        </div>
+        <div class="b">
+          <button class="btn btn-primary" type="submit">Enregistrer</button>
+          <button class="btn btn-primary" type="submit" (click)="Retour()">Retour</button>
+        </div>
+      </form>
+
+    </div>
+</div>
+</div>
+
