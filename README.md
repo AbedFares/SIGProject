@@ -1,24 +1,48 @@
-# SIGProject
+# Géo-STAT
+## Website to visualize data on a map
 
-Ce projet consiste à évaluer l'état de l'internet en Tunisie en remplissant un formulaire et en visualisant les réponses sur la carte géographique de la Tunisie.
+During this project we have developed a website that let the user fill a form about the state of the internet in Tunisia and then visualize all the data collected on an interactive map and check its statistics.
 
-# sigFront
+The project has been divided into three parts:
+- The frontend of the form using Angular which can be found in the sigFront folder.
+- The backend using Springboot which can be found in the sigBack folder.
+- The map page using Leaflet which can be found in the sigMap folder.
 
-La page d'acceuil et la page de la formulaire est développé en utilisant Angular 13.
-Il faut exécuter ces commandes:
-npm init
-npm install -g @angular/cli
-npm install bootstrap@3.3.7
+## Features
 
-# sigBack
+- Fill the form about the state of the internet.
+- Visualizing the data on the map of Tunisia.
+- Check the collected data statistics in each governorate.
 
-Le back-end de ce projet est réalisé en utilisant SpringBoot (Architecture Maven).
-Il faut changer "Application properties" pour pouvoir accéder à la base de données.
+## Technologies
 
-# sigMap
+Our project uses the following technologies:
+- [Angular](https://angular.io/)
+- [Leaflet](https://leafletjs.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [OpenStreetMap](https://www.openstreetmap.org/)
+- [Springboot](https://spring.io/)
 
-La partie de la visualisation de la map est faite ici en utilisant la library Leaflet (écrite en Javascript)
-La communication avec la base de données est réalisé en utilisant des scripts php.
-Pour pouvoir exploiter cette partie, vous devez avoir un serveur (WAMP est recommendé). 
-Il faut supprimer ";" dans ces lignes qui existent dans php.ini:
-;extension=pdo_pgsql
+And of course Geo-STAT itself is an open source with a public repository on Github.
+
+## Before running the project you will need to install the following dependencies:
+- [Node.js](https://nodejs.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [WAMPServer](https://www.wampserver.com/) or its equivalent to run PHP.
+
+Before running the Angular part, run the following command on the frontend Folder :
+```sh
+npm install
+```
+This will install all the dependencies related to the frontend part of the project
+
+## Installation
+
+In the Springboot part, make sure to change the application properties to adjust it to your POSTgresql database.
+Depending on the server you are running to run the php files, make sure to configure the php.ini file and enable the pgsql corresponding driver.
+Start the Angular project with
+
+```sh
+ng serve
+```
+Check out the home page at http://localhost:4200
